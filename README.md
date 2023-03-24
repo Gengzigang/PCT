@@ -27,9 +27,9 @@ The code is developed using python 3.8 on Ubuntu 16.04. The code is developed an
    pip install -r requirements.txt
    ```
 
-### Data preparation, following [HRNet](https://github.com/leoxiaobin/deep-high-resolution-net.pytorch)
+### Data Preparation
 
-You can download the COCO data from [COCO download](http://cocodataset.org/#download), 2017 train/val is needed. You can download the person detection result from [HRNet](https://github.com/leoxiaobin/deep-high-resolution-net.pytorch) repository and make them look like this:
+To obtain the COCO dataset, it can be downloaded from the [COCO download](http://cocodataset.org/#download), and specifically the 2017 train/val files are required. Additionally, the person detection results can be acquired from the [HRNet](https://github.com/leoxiaobin/deep-high-resolution-net.pytorch) repository. The resulting data directory should look like this:
 
     ${POSE_ROOT}
     |-- data
@@ -52,7 +52,7 @@ You can download the COCO data from [COCO download](http://cocodataset.org/#down
                     |-- 000000000632.jpg
                     |-- ... 
 
-### Model [zoo](https://mailustceducn-my.sharepoint.com/:f:/g/personal/aa397601_mail_ustc_edu_cn/EjGyRWSC7AZFukfefijQsK8ButemCzR8lLOdYWUPg5U2dg?e=4F2oEL)
+### Model [Zoo](https://mailustceducn-my.sharepoint.com/:f:/g/personal/aa397601_mail_ustc_edu_cn/EjGyRWSC7AZFukfefijQsK8ButemCzR8lLOdYWUPg5U2dg?e=4F2oEL)
 
 To use this codebase, we provide the following models and tools:
 1. SimMIM Pretrained Backbone: We provide SimMIM pre-trained swin [models](https://mailustceducn-my.sharepoint.com/:f:/g/personal/aa397601_mail_ustc_edu_cn/EgtBx4MGIFtKvfugHBycSucBfbsFt92X86HM_fgnzl0Z1w?e=OYsYqy) that you can download. Alternatively, you can use [SimMIM](https://github.com/microsoft/SimMIM) repository to pretrain your own models. (Note: When loading the SimMIM model, it is normal to encounter missing keys in the source state_dict, including relative_coords_table, relative_position_index, and norm3. These missing keys do not affect the results.)
