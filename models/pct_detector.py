@@ -261,7 +261,8 @@ class PCT(BasePose):
         final_preds['image_paths'] = image_paths
         final_preds['bbox_ids'] = bbox_ids
         results.update(final_preds)
-            
+        results['output_heatmap'] = None
+
         return results
 
     def show_result(self):

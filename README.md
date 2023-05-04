@@ -100,6 +100,13 @@ Additionally, you can choose a cleaner PCT that removes image guidance. The bene
 ./tools/dist_train.sh configs/pct_base_woimgguide_classifier.py 8
 ```
 
+#### Demo
+
+You need to install mmdet==2.26.0 and mmcv-full==1.7.0, and then use the following command to generate some image demos.
+```
+PYTHONPATH="$(dirname $0)/..":$PYTHONPATH python vis_tools/demo_img_with_mmdet.py vis_tools/cascade_rcnn_x101_64x4d_fpn_coco.py https://download.openmmlab.com/mmdetection/v2.0/cascade_rcnn/cascade_rcnn_x101_64x4d_fpn_20e_coco/cascade_rcnn_x101_64x4d_fpn_20e_coco_20200509_224357-051557b1.pth configs/pct_[base/large/huge]_classifier.py weights/pct/swin_[base/large/huge].pth --img-root images/ --img your_image.jpg --out-img-root images/ --thickness 2
+```
+
 ## Acknowledge
 
 Thanks to 
