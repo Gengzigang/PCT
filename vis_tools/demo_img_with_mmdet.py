@@ -134,7 +134,7 @@ def vis_pose_result(image_name, pose_results, thickness, out_file):
     plt.subplots_adjust(top=1,bottom=0,left=0,right=1,hspace=0,wspace=0)        
     plt.margins(0,0)
 
-    plt.savefig(out_file + '.pdf', format='pdf', bbox_inckes='tight', dpi=100)
+    plt.savefig(out_file + '.pdf', format='pdf', bbox_inches='tight', dpi=100)
     plt.close()
     
     
