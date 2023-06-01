@@ -3,6 +3,7 @@
 <p align="center">
   <a href="https://sites.google.com/view/pctpose">Page</a> |
   <a href="https://arxiv.org/pdf/2303.11638.pdf">Arxiv</a> |
+  <a href="https://www.youtube.com/watch?v=eXt_ONASk5E">Video</a> |
   <a href="#Environment">Environment</a> |
   <a href="#Usage">Usage</a> |
   <a href="#Acknowledge">Acknowledge</a> |
