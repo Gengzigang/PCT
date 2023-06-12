@@ -319,7 +319,7 @@ class WindowAttention(nn.Module):
         if self.attn_type == 'cosine_mh':
             q = F.normalize(q.float(), dim=-1)
             k = F.normalize(k.float(), dim=-1)
-            logit_scale = torch.clamp(self.logit_scale, max=torch.log(torch.tensor(1. / 0.01))).exp()
+            logit_scale = torch.clamp(self.logit_scale, max=torch.log(torch.tensor(1. / 0.01, device=self.logit_scale.device))).exp()
             attn = (q @ k.transpose(-2, -1)) * logit_scale.float()
         elif self.attn_type == 'normal':
             q = q * self.scale
